@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekap Nilai Mahasiswa</title>
+
+    <!-- Menghubungkan HTML dengan CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>📚 Rekap Nilai Mahasiswa</h1>
+            <p>Program untuk menghitung nilai akhir dan menentukan status kelulusan.</p>
+        </header>
+
+        <!-- Form Input -->
+        <section class="form-section">
+            <h2>Input Data Mahasiswa</h2>
+
+            <form id="formMahasiswa">
+                <div class="form-group">
+                    <label for="nama">Nama Mahasiswa</label>
+                    <input type="text" id="nama" placeholder="Masukkan nama mahasiswa" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nim">NIM</label>
+                    <input type="text" id="nim" placeholder="Masukkan NIM" required>
+                </div>
+
+                <div class="nilai-container">
+                    <div class="form-group">
+                        <label for="tugas">Nilai Tugas</label>
+                        <input type="number" id="tugas" min="0" max="100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="uts">Nilai UTS</label>
+                        <input type="number" id="uts" min="0" max="100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="uas">Nilai UAS</label>
+                        <input type="number" id="uas" min="0" max="100" required>
+                    </div>
+                </div>
+
+                <button type="submit">➕ Tambah Mahasiswa</button>
+            </form>
+        </section>
+
+        <!-- Rekap Data -->
+        <section class="table-section">
+            <h2>📊 Rekap Nilai</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>NIM</th>
+                            <th>Tugas</th>
+                            <th>UTS</th>
+                            <th>UAS</th>
+                            <th>Nilai Akhir</th>
+                            <th>Grade</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabelMahasiswa">
+                        <!-- Data mahasiswa akan ditampilkan oleh JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="pesanKosong" class="empty-message">
+                Belum ada data mahasiswa.
+            </p>
+        </section>
+
+        <!-- Statistik -->
+        <section class="summary">
+            <div class="card">
+                <h3>Jumlah Mahasiswa</h3>
+                <p id="jumlahMahasiswa">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Mahasiswa Lulus</h3>
+                <p id="jumlahLulus">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Mahasiswa Tidak Lulus</h3>
+                <p id="jumlahTidakLulus">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Rata-rata Nilai</h3>
+                <p id="rataRata">0</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 - Program Rekap Nilai Mahasiswa</p>
+        </footer>
+    </div>
+
+    <!-- Menghubungkan HTML dengan JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

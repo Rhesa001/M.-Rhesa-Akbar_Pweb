@@ -1,0 +1,185 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #eaf4ff;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* App Container */
+.app {
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.intro .eyebrow {
+    display: inline-block;
+    color: #00bba7;
+    background-color: #e0f7f4;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.intro h1 {
+    color: #1a365d;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    color: #556b82;
+    font-size: 15px;
+    max-width: 550px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Panel Layout */
+.panel {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Form Section (Kiri) & Result Section (Kanan) */
+form, .result {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    flex: 1;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #2d3748;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #1d4ed8;
+}
+
+#nama {
+    margin-bottom: 16px;
+}
+
+/* Input Grid (Tugas, UTS, UAS) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    margin-top: auto;
+    width: 100%;
+    padding: 12px;
+    background-color: #17387a;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #102a5c;
+}
+
+/* Result Section Styling */
+.result h2 {
+    color: #1a365d;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.result p {
+    font-size: 14px;
+    color: #4a5568;
+}
+
+/* Styling Elemen Hasil Dinamis (Bisa ditambahkan melalui JS) */
+.result-score {
+    font-size: 42px;
+    font-weight: 800;
+    color: #00bba7;
+    margin: 10px 0;
+}
+
+.result-status {
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.result-status span {
+    color: #10b981;
+}
+
+.result-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.result-card {
+    background-color: #f1f5f9;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #334155;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .panel {
+        flex-direction: column;
+    }
+}

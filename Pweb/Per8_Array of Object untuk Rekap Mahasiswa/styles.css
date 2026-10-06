@@ -1,0 +1,223 @@
+/* Reset & Style Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f7ff;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.app {
+    width: 100%;
+    max-width: 960px;
+}
+
+/* Section Header / Intro */
+.intro {
+    margin-bottom: 28px;
+}
+
+.intro .eyebrow {
+    display: inline-block;
+    color: #00bba7;
+    background-color: #e0f7f4;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.intro h1 {
+    color: #1e3a8a;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.intro p {
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Panel Layout (Untuk Form + Hasil Kalkulator) */
+.panel {
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+}
+
+form, .result {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+    flex: 1;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #1e293b;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    border-color: #1d4ed8;
+}
+
+#nama {
+    margin-bottom: 16px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+button[type="submit"] {
+    margin-top: auto;
+    width: 100%;
+    padding: 12px;
+    background-color: #1e3a8a;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #1e293b;
+}
+
+/* Result Section Base */
+.result h2 {
+    color: #1e3a8a;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+/* STYLE UNTUK TAMPILAN DASHBOARD REKAP (Seperti di gambar) */
+
+/* 1. Ringkasan Statistik (Atas: 3 Card) */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.stat-card {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+.stat-card h3 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.stat-card .value {
+    font-size: 36px;
+    font-weight: 800;
+    color: #00bba7;
+}
+
+/* 2. Kartu Mahasiswa (Bawah: 4 Card Grid) */
+.student-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.student-card {
+    background: #ffffff;
+    padding: 24px 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+}
+
+.badge-jurusan {
+    align-self: flex-start;
+    background-color: #e0f7f4;
+    color: #00bba7;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+
+.student-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 16px;
+}
+
+.student-card p {
+    font-size: 14px;
+    color: #475569;
+    margin-bottom: 8px;
+}
+
+.student-card p strong {
+    color: #0f172a;
+}
+
+/* Responsif untuk Layar Kecil */
+@media (max-width: 850px) {
+    .panel {
+        flex-direction: column;
+    }
+    .student-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .stats-grid,
+    .student-grid {
+        grid-template-columns: 1fr;
+    }
+}
